@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/vladdr/sandbox/CPP/last_n_chars_buffer_from_stream",
+      "program": "/Users/vladdr/sandbox/CPP/last_n_chars_buffer_from_stream/build/Debug/outDebug"
+    }
+  ]
+}
