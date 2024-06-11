@@ -1,14 +1,14 @@
 #ifndef ___BUFFER_H___
 #define ___BUFFER_H___
 
-#include <algorithm>
 #include <iterator>
+#include <string>
 
 template <int SIZE>
 class Buffer {
-  char buffer[SIZE];
-  size_t head;
-  size_t size;
+  char buffer[SIZE]; // circular array
+  size_t head; // index/position of the most recent character in the buffer
+  size_t size; // number of elements in the buffer
 
 public:
   Buffer() : head(0), size(0) {}
@@ -34,6 +34,8 @@ public:
 
   std::string GetBuffer() const {
     std::string res;
+    res.reserve(size+1);
+
     if (size < SIZE) {
       for (size_t i = 0; i < head; ++i) {
         res += buffer[i];
